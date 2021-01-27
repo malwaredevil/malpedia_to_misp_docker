@@ -19,7 +19,7 @@ bash /opt/m2m/dependencies/malpedia_to_misp/bootstrap.sh --misp-key $MISP_KEY \
             --misp-url $MISP_URL \
             --malpedia-key $MALPEDIA_KEY \
             --malpedia-username $MALPEDIA_USER \
-            --malpedia-password $MALPEDIA_PASSWORD
+            --malpedia-password $MALPEDIA_PASSWORD \
             --postgres-server $POSTGRES_HOST \
             --postgres-port $POSTGRES_PORT \
             --postgres-user $POSTGRES_USER \
