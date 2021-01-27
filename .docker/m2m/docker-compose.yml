@@ -1,0 +1,30 @@
+version: "3.4"
+services:
+  postgres:
+    image: "postgres:latest"
+    restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+    stop_grace_period: "${DOCKER_STOP_GRACE_PERIOD:-3s}"
+    env_file:
+      - ".env"
+    volumes:
+      - db:/var/lib/postgresql/data
+  malpedia_to_misp:
+    build:
+      context: ../../
+      dockerfile: ./.docker/m2m/Dockerfile
+    image: malpedia_to_misp:latest
+    depends_on:
+      - "postgres"
+    env_file:
+      - ".env"
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    restart: "${DOCKER_RESTART_POLICY:-no}"
+    stop_grace_period: "${DOCKER_STOP_GRACE_PERIOD:-3s}"
+    volumes:
+      - gitrepos:/opt/m2m/dependencies
+      - db:/opt/m2m/db
+volumes:
+  gitrepos:
+    name: "gitrepos"
+  db:
+    name: "db"

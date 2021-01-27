@@ -127,3 +127,26 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VSCODE
+.vscode
+.pyc
+.vscode-root
+
+# build
+cti/
+malpedia_to_misp/
+misp-galaxy/
+dependencies/
+db/
+malpedia/
+
+#ssh key protection
+ssh/*
+!.ssh/.gitkeep
+id_rsa*
+id_ecdsa*
+id_ed25519*
+known_hosts*
+ssh_key*
+

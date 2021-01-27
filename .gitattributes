@@ -1,0 +1,16 @@
+* text eol=lf
+
+*.png binary
+*.jpg binary
+*.exe binary
+*.zip binary
+*.svc binary
+*.gif binary
+*.pcap binary
+*.trace binary
+*.pdf binary
+*.vsdx binary
+*.eot binary
+*.ttf binary
+*.woff binary
+*.otf binary
