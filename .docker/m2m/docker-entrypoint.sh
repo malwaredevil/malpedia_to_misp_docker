@@ -1,6 +1,17 @@
 #!/bin/bash
 # DO THIS WHEN THE CONTAINER STARTS
 set -e
+echo "***********************************************************************************"
+echo "**                MALPEDIA TO MISP DOCKER INGEST Starting                        **"
+echo "***********************************************************************************"
+echo "***********************************************************************************"
+echo "**         If you wish to keep your MISP database up-to-date with Malpedia       **"
+echo "**        you will need to create a cron job or  scheduled task on your host     **"
+echo "**        that executes this container as often as you require and pending       **"
+echo "**        your  system and network specifications.                               **"
+echo "**                                                                               **"
+echo "***********************************************************************************"
+echo "***********************************************************************************"
 
 eval `ssh-agent -s`
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
