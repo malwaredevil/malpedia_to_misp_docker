@@ -24,7 +24,7 @@ bash /opt/m2m/dependencies/malpedia_to_misp/bootstrap.sh --misp-key $MISP_KEY \
             --postgres-password $POSTGRES_PASSWORD
 
 echo "***********************************************************************************"
-echo "**                MALPEDIA TO MISP DOCKER INGEST COPMLETE                        **"
+echo "**                MALPEDIA TO MISP DOCKER INGEST COMPLETE                        **"
 echo "***********************************************************************************"
 echo "***********************************************************************************"
 echo "**         If you wish to keep your MISP database up-to-date with Malpedia       **"
@@ -38,4 +38,4 @@ echo "**************************************************************************
 
 sleep 5m
 
-# exec "$@"
+#exec "$@"
