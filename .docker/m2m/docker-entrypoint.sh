@@ -29,8 +29,8 @@ chmod +x /opt/m2m/dependencies/malpedia_to_misp/bootstrap.sh
 bash /opt/m2m/dependencies/malpedia_to_misp/bootstrap.sh --misp-key $MISP_KEY \
             --misp-url $MISP_URL \
             --malpedia-key $MALPEDIA_KEY \
-            --postgres-server 0.0.0.0 \
-            --postgres-port 5432 \
+            --postgres-server $POSTGRES_HOST \
+            --postgres-port $POSTGRES_PORT \
             --postgres-user $POSTGRES_USER \
             --postgres-password $POSTGRES_PASSWORD
 
