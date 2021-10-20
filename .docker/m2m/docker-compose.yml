@@ -6,6 +6,8 @@ services:
     stop_grace_period: "${DOCKER_STOP_GRACE_PERIOD:-3s}"
     env_file:
       - ".env"
+    ports:
+      - "5432:5432"
     volumes:
       - db:/var/lib/postgresql/data
   malpedia_to_misp:
